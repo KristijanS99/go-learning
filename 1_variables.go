@@ -1,7 +1,11 @@
+// All variables must be used
+// Lower case scoped to package, uppercase exposed outside
+// camelCase preferred, capitalize acronyms (ex. URL)
+// Use 'strcov' package for strings conversion
 package main
 
 import (
-	"fmt"
+	"log"
 	"strconv"
 )
 
@@ -15,6 +19,6 @@ func main() {
 	theString := "The string"
 	shadowed := 50
 
-	fmt.Printf(" %v, %T\n %v, %T\n %v, %T\n %v, %T\n %v, %T\n %v, %T\n",
+	log.Printf(":\n %v, %T\n %v, %T\n %v, %T\n %v, %T\n %v, %T\n %v, %T\n",
 		i, i, j, j, k, k, theString, theString, strconv.Itoa(i), strconv.Itoa(i), shadowed, shadowed)
 }
