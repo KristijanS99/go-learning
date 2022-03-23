@@ -27,9 +27,9 @@ func main() {
 	log.Printf(": %v, %T", enumeratedConst3, enumeratedConst3)
 
 	const (
-		isMale = 1 << iota
-		isAdult
-		isEmployed
+		isMale     = 1 << iota // 1
+		isAdult                // 10
+		isEmployed             // 100
 	)
 	var personInfo byte = isAdult | isEmployed
 	log.Printf(": %v, %T", personInfo, personInfo)
