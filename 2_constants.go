@@ -27,12 +27,12 @@ func main() {
 	log.Printf(": %v, %T", enumeratedConst3, enumeratedConst3)
 
 	const (
-		isMale     = 1 << iota // 1
-		isAdult                // 10
+		isMale     = 1 << iota // 001
+		isAdult                // 010
 		isEmployed             // 100
 	)
-	var personInfo byte = isAdult | isEmployed
+	var personInfo byte = isAdult | isEmployed // 110
 	log.Printf(": %v, %T", personInfo, personInfo)
-	log.Printf(": Is male? %v", personInfo&isMale == isMale)
-	log.Printf(": Is adult? %v", personInfo&isAdult == isAdult)
+	log.Printf(": Is male? %v", personInfo&isMale == isMale)    // 110 & 001 => 000 equals 001 ? -> false
+	log.Printf(": Is adult? %v", personInfo&isAdult == isAdult) // 110 & 010 => 010 equals 010 ? -> true
 }
