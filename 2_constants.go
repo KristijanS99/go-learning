@@ -1,8 +1,7 @@
 /*
-All variables must be used
+All consts must be used
 Lower case scoped to package, uppercase exposed outside
-camelCase preferred, capitalize acronyms (ex. URL)
-Use 'strcov' package for strings conversion
+camelCase preferred
 */
 package main
 
